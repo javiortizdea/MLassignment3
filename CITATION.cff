@@ -9,7 +9,6 @@ message: >-
 type: software
 authors:
   - given-names: Francisco Javier
-    name-particle: F. J.
     family-names: Ortiz de Artiñano Martínez-Larraz
 repository-code: 'https://github.com/javiortizdea/MLassignment3'
 license: Unlicense
