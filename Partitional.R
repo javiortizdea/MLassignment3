@@ -1,7 +1,6 @@
 library(fpc)
 library(cluster)
-library(mclust)
-library(Kmedians)
+library(ggplot2)
 library(factoextra)
 
 data <- read.csv("data.csv")

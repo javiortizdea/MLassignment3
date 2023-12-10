@@ -1,9 +1,8 @@
 library(fpc)
 library(cluster)
-library(ClusterR)
 library(mclust)
-library(factoextra)
 library(ggfortify)
+library(ggplot2)
 
 
 data <- read.csv("data.csv")
@@ -31,7 +30,7 @@ autoplot(pca_res, data = xWithLabels, loadings = TRUE, colour = "cluster",
 
 pca <- PCA(x)
 pcaScores <- data.frame(pca$scores)
-ggplot(data = pcaScores, aes(x= PC.1, y = PC.2, col = pam.res$clustering)) +
+ggplot(data = pcaScores, aes(x= PC.1, y = PC.2, col = as.factor(pam.res$clustering))) +
   geom_point(size = 3)
 
 sil <- silhouette(gmm$classification, dist(x, method = "binary"))
